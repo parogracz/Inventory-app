@@ -28,6 +28,7 @@ export default function Report({route, navigation}){
     return (
         /** Renderowanie warunkowe tabeli */
         <View>
+            <Text>Text</Text>
              { rows && <Table rows={rows} />}
         </View>
     );
