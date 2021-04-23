@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, Touchable } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export const PoleHaslo = () => {
+export const FieldPassword = () => {
 	return (
 		<View style={styles.iconContainer_2}>
 			<Icon
@@ -22,7 +22,7 @@ export const PoleHaslo = () => {
 	);
 };
 
-export const PoleLogin = () => {
+export const FieldLogin = () => {
 	return (
 		<View style={styles.iconContainer_2}>
 			<Icon
@@ -41,7 +41,7 @@ export const PoleLogin = () => {
 	);
 };
 
-export const LokalizacjaRaport = () => {
+export const FieldRaportLocation = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -60,7 +60,7 @@ export const LokalizacjaRaport = () => {
 	);
 };
 
-export const PoleKategoria = () => {
+export const FieldCategory = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -79,7 +79,7 @@ export const PoleKategoria = () => {
 	);
 };
 
-export const PoleKod = () => {
+export const FieldCode = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -107,7 +107,7 @@ export const PoleKod = () => {
 	);
 };
 
-export const PoleLokalizacja = () => {
+export const FieldLocation = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -135,7 +135,7 @@ export const PoleLokalizacja = () => {
 	);
 };
 
-export const PoleNazwa = () => {
+export const FieldName = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -154,7 +154,7 @@ export const PoleNazwa = () => {
 	);
 };
 
-export const PoleOpis = () => {
+export const FieldDescription = () => {
 	return (
 		<View style={styles.iconContainer_1}>
 			<Icon
@@ -174,14 +174,6 @@ export const PoleOpis = () => {
 };
 
 const styles = StyleSheet.create({
-	NiebIn: {
-		backgroundColor: '#8fa5be',
-		borderColor: '#eff2f6',
-	},
-	PomaIn: {
-		backgroundColor: '#fec786',
-		borderColor: '#fec786',
-	},
 	iconContainer_1: {
 		flexDirection: 'row',
 		borderBottomWidth: 1,

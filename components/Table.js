@@ -162,7 +162,6 @@ topColumnLeftRight: {
 topColumnLeft: {
   width: '30.5%',
   textAlign: 'center',
-
   fontSize: 24,
   borderLeftColor: 'white',
   color: 'white',

@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 
-export function Dodaj(navigation){
+export function Add(navigation){
 	return (
     <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
       <View style={styles.Blue}>
@@ -11,7 +11,7 @@ export function Dodaj(navigation){
 	);
 }
 
-export function Eksportuj(navigation){
+export function Explort(navigation){
 	return (
     <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
       <View style={styles.Orange}>
@@ -21,7 +21,7 @@ export function Eksportuj(navigation){
 	);
 };
 
-export function Wyloguj(navigation){
+export function LogOut(navigation){
 	return (
   <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
     <View style={styles.Gray}>
@@ -31,7 +31,7 @@ export function Wyloguj(navigation){
   );
 };
 
-export function Zaloguj(navigation){
+export function LogOn(navigation){
 	return (
     <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
       <View style={styles.Orange}>

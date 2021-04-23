@@ -6,7 +6,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-import {Wyloguj} from '../components/Buttons.js';
+import {LogOut} from '../components/Buttons.js';
 import ChooseSectionButton from "../components/ChooseSectionButton";
 import SectionsMenu from "../components/SectionsMenu";
 
@@ -58,7 +58,7 @@ export default function Home({ navigation }) {
         <View 
           style={styles.logout}
         >
-          <Wyloguj/>
+          <LogOut/>
         </View>
         <View
           style={styles.buttonContainer}

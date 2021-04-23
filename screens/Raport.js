@@ -1,42 +1,45 @@
 import React, {Component, useState} from "react";
-import { Button, StyleSheet, Text, View, Image, ImageBackground, TextInput} from "react-native";
-import {LokalizacjaRaport} from '../components/Inputs.js';
-import {Eksportuj} from '../components/Buttons.js';
+import { ScrollView, StyleSheet, KeyboardAvoidingView, View, Image, ImageBackground, TextInput} from "react-native";
+import {FieldRaportLocation} from '../components/Inputs.js';
+import {Explort} from '../components/Buttons.js';
 import {Table} from '../components/Table.js';
-import { ScrollView } from "react-native-gesture-handler";
 import {PasekNawigacyjny,PasekNawigacyjnyInfo} from '../components/PasekNawigacyjny.js';
 
 export default function App(){
   return (
-  //<ScrollView>
-  <ImageBackground source={require('../assets/tlo_raport.png')} style={styles.Tło}>
-    <View style={styles.bezeksportu}>
+    <KeyboardAvoidingView
+      style={{
+        flexGrow: 1,
+      }}
+    >
+      <ImageBackground source={require('../assets/tlo_raport.png')} style={styles.Tło}>
+        <View style={styles.bezeksportu}>
 
-      <View style={styles.paseknagorze}>
-        <PasekNawigacyjnyInfo/>
-      </View>
+          <View style={styles.paseknagorze}>
+            <PasekNawigacyjnyInfo/>
+          </View>
 
-      <View style={styles.naglowek}>
-        <Image 
-        source={require('../assets/raport.png')}
-        style={styles.h1}
-        />
-      </View>
-      
-      <View style={styles.nazwa}>
-        <LokalizacjaRaport/>
-      </View>
+          <View style={styles.naglowek}>
+            <Image 
+            source={require('../assets/raport.png')}
+            style={styles.h1}
+            />
+          </View>
+          
+          <View style={styles.nazwa}>
+            <FieldRaportLocation/>
+          </View>
 
-      <View style={styles.tableContainer}>
-        <Table/>
-      </View>
-      
-      <View style={styles.buttonContainer}>
-        <Eksportuj/>
-      </View>
-    </View>
-  </ImageBackground>
-  //</ScrollView>
+          <View style={styles.tableContainer}>
+            <Table/>
+          </View>
+          
+          <View style={styles.buttonContainer}>
+            <Explort/>
+          </View>
+        </View>
+      </ImageBackground>
+    </KeyboardAvoidingView>
   );
 }
   const styles=StyleSheet.create({
@@ -68,8 +71,8 @@ export default function App(){
     },
     tableContainer:{
       width:'85%',
-      marginLeft: '8%',
       height: '60%',
+      alignSelf: "center",
     },
     buttonContainer:{
       width:'100%',

@@ -1,46 +1,58 @@
 import React, {Component, useState} from "react";
-import {Button, StyleSheet, Text, View, Image, ImageBackground, TextInput} from "react-native";
+import {StyleSheet,ScrollView, View, ImageBackground, KeyboardAvoidingView,} from "react-native";
 import tlo from "../assets/homePage/tempBackground.png";
-import {PoleNazwa, PoleKategoria, PoleLokalizacja, PoleKod, PoleOpis} from '../components/Inputs.js';
-import {Dodaj} from '../components/Buttons.js';
+import {FieldName, FieldCategory, FieldLocation, FieldCode, FieldDescription} from '../components/Inputs.js';
+import {Add} from '../components/Buttons.js';
 import {PasekNawigacyjny} from '../components/PasekNawigacyjny.js';
 
 export default function App(){
   return (
-    <ImageBackground source={require('../assets/tlo dodawanie.png')} style={styles.Tło}>
-    <View style={styles.Tło}>
-      <View style={styles.paseknagorze}>
-        <PasekNawigacyjny/>
-      </View>
-      <View style={styles.nazwa}>
-        <PoleNazwa/>
-      </View>
-        
-      <View style={styles.nazwa}>
-        <PoleKategoria/>
-      </View>
+  <ScrollView
+    contentContainerStyle={{
+      flexGrow: 1,
+      minHeight: "100%",
+    }}
+  >
+    <KeyboardAvoidingView
+      style={{
+        flexGrow: 1,
+      }}
+    >
+      <ImageBackground source={require('../assets/tlo dodawanie.png')} style={styles.Tło}>
+        <View style={styles.Tło}>
+          <View style={styles.paseknagorze}>
+            <PasekNawigacyjny/>
+          </View>
+          <View style={styles.nazwa}>
+            <FieldName/>
+          </View>
+            
+          <View style={styles.nazwa}>
+            <FieldCategory/>
+          </View>
 
-      <View style={styles.nazwa}>
-        <PoleLokalizacja/>
-      </View>
+          <View style={styles.nazwa}>
+            <FieldLocation/>
+          </View>
 
-      <View style={styles.nazwa}>
-        <PoleKod/>
-      </View>
+          <View style={styles.nazwa}>
+            <FieldCode/>
+          </View>
 
-      <View style={styles.opis}>
-        <PoleOpis/>
-      </View>
+          <View style={styles.opis}>
+            <FieldDescription/>
+          </View>
 
-      <View style={styles.buttonContainer}>
-        <Dodaj/>
-      </View>
+          <View style={styles.buttonContainer}>
+            <Add/>
+          </View>
 
-    </View>
-    </ImageBackground>
+        </View>
+      </ImageBackground>
+    </KeyboardAvoidingView>
+  </ScrollView>
   );
-}
-
+};
   const styles=StyleSheet.create({
     paseknagorze:{
       width: '100%',
@@ -69,7 +81,6 @@ export default function App(){
       alignItems: "flex-start",
       marginLeft: "10%",
     },
-
     Tło: {
       width: '100%',
       height: '100%',      
