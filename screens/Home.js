@@ -6,7 +6,7 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-
+import {Wyloguj} from '../components/Buttons.js';
 import ChooseSectionButton from "../components/ChooseSectionButton";
 import SectionsMenu from "../components/SectionsMenu";
 
@@ -23,7 +23,7 @@ export default function Home({ navigation }) {
         <ChooseSectionButton
           srcImg={require("../assets/homePage/TOWARButton.png")}
           PressHandler={() => {
-            navigation.navigate("Login");
+            navigation.navigate("Dodawanie");
           }}
         />
         <ChooseSectionButton
@@ -35,7 +35,7 @@ export default function Home({ navigation }) {
         <ChooseSectionButton
           srcImg={require("../assets/homePage/UŻYTKOWNICYButton.png")}
           PressHandler={() => {
-            navigation.navigate("Login");
+            navigation.navigate("Raport");
           }}
         />
         <ChooseSectionButton
@@ -55,22 +55,13 @@ export default function Home({ navigation }) {
         source={require("../assets/homePage/tempBackground.png")}
         style={styles.imageBackground}
       >
-        <View style={{ alignSelf: "flex-end" }}>
-          <TouchableOpacity onPress={Logout} style={styles.logout}>
-            <Image
-              style={styles.imgButton}
-              source={require("../assets/homePage/WYLOGUJButton.png")}
-            />
-          </TouchableOpacity>
+        <View 
+          style={styles.logout}
+        >
+          <Wyloguj/>
         </View>
         <View
-          style={{
-            marginTop: "auto",
-            marginBottom: "auto",
-            paddingBottom: styles.logout.marginTop,
-            maxWidth: 340,
-            maxHeight: 440,
-          }}
+          style={styles.buttonContainer}
         >
           <SectionsMenu>
             <Sections />
@@ -92,11 +83,16 @@ const styles = StyleSheet.create({
   },
   logout: {
     marginTop: 40,
-    marginRight: 40,
-    maxWidth: 150,
+    marginLeft: "50%",
+    height: '8%',
+    maxHeight: 70,
   },
   imgButton: {
     resizeMode: "contain",
     maxWidth: "100%",
+  },
+  buttonContainer: {
+    width:"80%",
+    height:"80%",
   },
 });

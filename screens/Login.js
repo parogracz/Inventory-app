@@ -11,8 +11,8 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import NotificationBox from "../components/NotificationBox";
-import {PoleHaslo, PoleLogin} from '../components/Buttons.js';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {PoleHaslo, PoleLogin} from '../components/Inputs.js';
+import {Zaloguj} from '../components/Buttons.js';
 
 export default function Login({ navigation }) {
   const Creq_lib = require("../clientRequests/Creq_lib");
@@ -79,21 +79,19 @@ export default function Login({ navigation }) {
                 {/* tutaj wstawić nowe inputy */}
               </View>
             </View>
-
             <View style={styles.bottContainer}>
-              {/* // Przycisk "Zaloguj" */}
-              <TouchableOpacity onPress={SendLoginData} style={styles.button}>
-                <Image
-                  style={styles.imgButton}
-                  source={require("../assets/loginPage/ZALOGUJButton.png")}
-                />
-              </TouchableOpacity>
-              <Text
+              <View style={styles.buttonContainer}>
+                <Zaloguj/>
+              </View>
+              <TouchableOpacity
                 onPress={ForgotPassword}
-                style={{ fontSize: 16, color: "#a2b9d4" }}
               >
+                <Text
+                style={{ fontSize: 16, color: "#a2b9d4" }}
+                >
                 Zapomniałem(am) hasła
-              </Text>
+                </Text>
+              </TouchableOpacity>
             </View>
           </ImageBackground>
         </View>
@@ -118,6 +116,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     paddingTop: 40,
+    marginTop: 40,
   },
   loginTitle: {
     maxWidth: "80%",
@@ -128,11 +127,11 @@ const styles = StyleSheet.create({
     marginTop: '10%',
   },
   bottContainer: {
-    marginTop: '10%',
+    marginTop: 200,
     alignItems: "center",
   },
-  button: {
-    maxWidth: 150,
+  buttonContainer: {
+    height: "33%",
   },
   imgButton: {
     resizeMode: "contain",

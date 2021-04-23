@@ -1,165 +1,74 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React from "react";
+import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
 
-export const PoleHaslo = () => {
+export function Dodaj(navigation){
 	return (
-		<View style={styles.iconContainer}>
-			<Icon
-				name="lock"
-				color="#000"
-				size={30}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Hasło"
-			/>
-		</View>
+    <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
+      <View style={styles.Blue}>
+       <Text style={styles.appButtonText}>Dodaj</Text>
+      </View>
+    </TouchableOpacity>
+	);
+}
+
+export function Eksportuj(navigation){
+	return (
+    <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
+      <View style={styles.Orange}>
+       <Text style={styles.appButtonText}>Eksportuj</Text>
+      </View>
+    </TouchableOpacity>
 	);
 };
 
-export const PoleLogin = () => {
+export function Wyloguj(navigation){
 	return (
-		<View style={styles.iconContainer}>
-			<Icon
-				name="user"
-				color="#000"
-				size={30}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Login"
-			/>
-		</View>
-	);
+  <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
+    <View style={styles.Gray}>
+      <Text style={styles.appButtonText}>Wyloguj</Text>
+    </View>
+	</TouchableOpacity>
+  );
 };
 
-export const LokalizacjaRaport = () => {
+export function Zaloguj(navigation){
 	return (
-		<View style={styles.iconContainer, styles.PomaIn}>
-			<Icon
-				name="map-marker"
-				color="#000"
-				size={32}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Lokalizacja"
-			/>
-		</View>
-	);
-};
-
-export const PoleKategoria = () => {
-	return (
-		<View style={styles.iconContainer, styles.PomaIn}>
-			<Icon
-				name="file"
-				color="#000"
-				size={28}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Kategoria"
-			/>
-		</View>
-	);
-};
-
-export const PoleKod = () => {
-	return (
-		<View style={styles.iconContainer, styles.NiebIn}>
-			<Icon
-				name="search"
-				color="#000"
-				size={27}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Kod"
-			/>
-		</View>
-	);
-};
-
-export const PoleLokalizacja = () => {
-	return (
-		<View style={styles.iconContainer, styles.PomaIn}>
-			<Icon
-				name="map-marker-alt"
-				color="#000"
-				size={30}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Lokalizacja"
-			/>
-		</View>
-	);
-};
-
-export const PoleNazwa = () => {
-	return (
-		<View style={styles.iconContainer, styles.PomaIn}>
-			<Icon
-				name="archive"
-				color="#000"
-				size={28}
-				color="#fcfefc"
-				style={{ marginRight: 10 }}
-			/>
-			<TextInput
-				style={styles.inputStyle}
-				autoCorrect={false}
-				placeholder="Nazwa"
-			/>
-		</View>
+    <TouchableOpacity onPress={()=> {}} style={styles.appButtonContainer}>
+      <View style={styles.Orange}>
+        <Text style={styles.appButtonText}>Zaloguj</Text>
+      </View>
+    </TouchableOpacity>
 	);
 };
 
 const styles = StyleSheet.create({
-	NiebIn: {
-		backgroundColor: '#8fa5be',
-		borderColor: '#eff2f6',
-	},
-	PomaIn: {
-		backgroundColor: '#fec786',
-		borderColor: '#fec786',
-	},
-	iconContainer: {
-		flexDirection: 'row',
-		borderBottomWidth: 1,
-		width: '100%',
-		height: '100%',
-		paddingVertical: '3%',
-		paddingHorizontal: 13,
-		borderWidth: 1,
-		borderRadius: 25,
-		fontSize: 16,
-    	backgroundColor: '#8fa5be',
-		borderColor: '#8fa5be',
-	},
-	inputStyle: {
-		flex: 1,
-		width: "100%",
-	},
-});
-//import {PoleHaslo, PoleLogin, LokalizacjaRaport, PoleKategoria, PoleKod, PoleLokalizacja, PoleNazwa, } from './Buttons.js';
+      Gray:{
+        backgroundColor: "#B6B6B4",
+        borderRadius: 40,
+        height: '100%',
+      },
+      Blue:{
+        backgroundColor: "#8fa5be",
+        borderRadius: 40,
+        height: '100%',
+      },
+      Orange:{
+          backgroundColor: "#ff8c1a",
+          borderRadius: 40,
+          height: '100%',
+      },
+      appButtonContainer: {
+        width: 150,
+        height: '100%',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        alignSelf: "center",
+      },
+      appButtonText: {
+        marginTop: "4%",
+        fontSize: 20,
+        color: "#fff",
+        alignSelf: "center",
+        textTransform: "uppercase"
+      }
+  });
