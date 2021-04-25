@@ -70,10 +70,10 @@ export default function Login({ navigation }) {
                 source={require("../assets/loginPage/LOGOWANIE.png")}
               />
               <View style={styles.inputContainer}>
-                <View style={styles.Login}>
+                <View style={styles.login}>
                   <FieldLogin/>
                 </View>
-                <View style={styles.Login}>
+                <View style={styles.login}>
                   <FieldPassword/>
                 </View>
                 {/* tutaj wstawić nowe inputy */}
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     maxWidth: "100%",
   },
-  Login: {
+  login: {
     width: '100%',
     height: '23%',
     margin: '3%',

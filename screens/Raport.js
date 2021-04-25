@@ -12,21 +12,21 @@ export default function App(){
         flexGrow: 1,
       }}
     >
-      <ImageBackground source={require('../assets/tlo_raport.png')} style={styles.Tło}>
-        <View style={styles.bezeksportu}>
+      <ImageBackground source={require('../assets/tlo_raport.png')} style={styles.background}>
+        <View style={styles.export}>
 
-          <View style={styles.paseknagorze}>
+          <View style={styles.navi}>
             <PasekNawigacyjnyInfo/>
           </View>
 
-          <View style={styles.naglowek}>
+          <View style={styles.header}>
             <Image 
             source={require('../assets/raport.png')}
             style={styles.h1}
             />
           </View>
           
-          <View style={styles.nazwa}>
+          <View style={styles.name}>
             <FieldRaportLocation/>
           </View>
 
@@ -43,26 +43,26 @@ export default function App(){
   );
 }
   const styles=StyleSheet.create({
-    Tło: {
+    background: {
       width: '100%',
       height: '100%',      
     },
-    paseknagorze:{
+    navi:{
       width: '110%',
       flexDirection: 'row',
     },
-    naglowek:{
+    header:{
       alignItems:'center',
     },
     h1:{
       resizeMode: "contain",
       width: 200,
     },
-    bezeksportu:{
+    export:{
         width: '100%',
         height: '80%',      
     },
-    nazwa:{
+    name:{
       width: "80%",
       alignItems: "center",
       height:53,      

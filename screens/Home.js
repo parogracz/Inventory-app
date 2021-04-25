@@ -7,6 +7,7 @@ import {
   Image,
 } from "react-native";
 import {LogOut} from '../components/Buttons.js';
+import {PackageButton, LocationButton, UsersButton, SettingButton} from '../components/roundTouch.js';
 import ChooseSectionButton from "../components/ChooseSectionButton";
 import SectionsMenu from "../components/SectionsMenu";
 
@@ -17,36 +18,36 @@ export default function Home({ navigation }) {
   };
 
   // poszczególne sekcje do menu
-  const Sections = () => {
-    return (
-      <>
-        <ChooseSectionButton
-          srcImg={require("../assets/homePage/TOWARButton.png")}
-          PressHandler={() => {
-            navigation.navigate("Dodawanie");
-          }}
-        />
-        <ChooseSectionButton
-          srcImg={require("../assets/homePage/LOKALIZACJAButton.png")}
-          PressHandler={() => {
-            navigation.navigate("Login");
-          }}
-        />
-        <ChooseSectionButton
-          srcImg={require("../assets/homePage/UŻYTKOWNICYButton.png")}
-          PressHandler={() => {
-            navigation.navigate("Raport");
-          }}
-        />
-        <ChooseSectionButton
-          srcImg={require("../assets/homePage/USTAWIENIAButton.png")}
-          PressHandler={() => {
-            navigation.navigate("Login");
-          }}
-        />
-      </>
-    );
-  };
+  // const Sections = () => {
+  //   return (
+  //     <>
+  //       <ChooseSectionButton
+  //         srcImg={require("../assets/homePage/TOWARButton.png")}
+  //         PressHandler={() => {
+  //           navigation.navigate("Dodawanie");
+  //         }}
+  //       />
+  //       <ChooseSectionButton
+  //         srcImg={require("../assets/homePage/LOKALIZACJAButton.png")}
+  //         PressHandler={() => {
+  //           navigation.navigate("Login");
+  //         }}
+  //       />
+  //       <ChooseSectionButton
+  //         srcImg={require("../assets/homePage/UŻYTKOWNICYButton.png")}
+  //         PressHandler={() => {
+  //           navigation.navigate("Raport");
+  //         }}
+  //       />
+  //       <ChooseSectionButton
+  //         srcImg={require("../assets/homePage/USTAWIENIAButton.png")}
+  //         PressHandler={() => {
+  //           navigation.navigate("Login");
+  //         }}
+  //       />
+  //     </>
+  //   );
+  // };
 
   return (
     <View style={styles.wrapper}>
@@ -60,12 +61,14 @@ export default function Home({ navigation }) {
         >
           <LogOut/>
         </View>
+        
         <View
           style={styles.buttonContainer}
         >
-          <SectionsMenu>
-            <Sections />
-          </SectionsMenu>
+          <PackageButton/>
+          <LocationButton/>
+          <UsersButton/>
+          <SettingButton/>
         </View>
       </ImageBackground>
     </View>

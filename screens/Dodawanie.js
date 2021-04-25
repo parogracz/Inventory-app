@@ -1,5 +1,5 @@
 import React, {Component, useState} from "react";
-import {StyleSheet,ScrollView, View, ImageBackground, KeyboardAvoidingView,} from "react-native";
+import {Stack,StyleSheet,ScrollView, View, ImageBackground, KeyboardAvoidingView,} from "react-native";
 import tlo from "../assets/homePage/tempBackground.png";
 import {FieldName, FieldCategory, FieldLocation, FieldCode, FieldDescription} from '../components/Inputs.js';
 import {Add} from '../components/Buttons.js';
@@ -18,28 +18,28 @@ export default function App(){
         flexGrow: 1,
       }}
     >
-      <ImageBackground source={require('../assets/tlo dodawanie.png')} style={styles.Tło}>
-        <View style={styles.Tło}>
-          <View style={styles.paseknagorze}>
+      <ImageBackground source={require('../assets/tlo dodawanie.png')} style={styles.background}>
+        <View style={styles.background}>
+          <View style={styles.navi}>
             <PasekNawigacyjny/>
           </View>
-          <View style={styles.nazwa}>
+          <View style={styles.name}>
             <FieldName/>
           </View>
             
-          <View style={styles.nazwa}>
+          <View style={styles.name}>
             <FieldCategory/>
           </View>
 
-          <View style={styles.nazwa}>
+          <View style={styles.name}>
             <FieldLocation/>
           </View>
 
-          <View style={styles.nazwa}>
+          <View style={styles.name}>
             <FieldCode/>
           </View>
 
-          <View style={styles.opis}>
+          <View style={styles.description}>
             <FieldDescription/>
           </View>
 
@@ -54,13 +54,13 @@ export default function App(){
   );
 };
   const styles=StyleSheet.create({
-    paseknagorze:{
+    navi:{
       width: '100%',
       flexDirection: 'row',
       marginBottom: 40,
     },
 
-    nazwa:
+    name:
     {
       width: "80%",
       marginLeft: "10%",
@@ -74,14 +74,14 @@ export default function App(){
       alignItems: "center",
       height: "9%",
     },
-    opis:
+    description:
     {
       width: "80%",
       height: "30%",
       alignItems: "flex-start",
       marginLeft: "10%",
     },
-    Tło: {
+    background: {
       width: '100%',
       height: '100%',      
     },
